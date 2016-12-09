@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Visited Links",
+  "description": "Changes color of visited links based on browser history",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "commands": {
+    "command_toggle_global": {
+      "description": "Toggle COLORS on/off"
+      },
+      "command_toggle_site": {
+        "description": "Toggle COLORS on a site"
+      }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "custom.css"
+      ]
+    }
+  ]
+}
